@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may tinh</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhap vao so a" id="txt-1"/>
+    <input type="text" placeholder="Nhap vao so b" id="txt-2"/>
+    <input type="text" placeholder="Ket qua" id="txt-3" readonly="readonly"/>
+    </br>
+    <button onclick="phepcong();">Addition(+)</button>
+    <button onclick="pheptru();">Subtraction(-)</button>
+    <button onclick="phepnhan();">Multiplication(X)</button>
+    <button onclick="phepchia();">Division(/)</button>
+</body>
+
+<script>
+    function phepcong(){
+        var a =document.getElementById("txt-1").value;
+        var b =document.getElementById("txt-2").value;
+        var c =Number(a) + Number(b);
+        var d =document.getElementById("txt-3");
+        d.value =c;
+    }
+
+    function pheptru(){
+        var a =document.getElementById("txt-1").value;
+        var b =document.getElementById("txt-2").value;
+        var e =Number(a) - Number(b);
+        var f =document.getElementById("txt-3");
+        f.value =e;
+    }
+
+    function phepnhan(){
+        var a =document.getElementById("txt-1").value;
+        var b =document.getElementById("txt-2").value;
+        var c =Number(a) * Number(b);
+        var d =document.getElementById("txt-3");
+        d.value =c;
+    }
+
+    function phepchia(){
+        var a =document.getElementById("txt-1").value;
+        var b =document.getElementById("txt-2").value;
+        var c =Number(a) / Number(b);
+        var d =document.getElementById("txt-3");
+        d.value =c;
+    }
+</script>
+
+</html>
