@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+
+
+</head>
+<body>
+    <form>
+        <input type="text" id="txt"/>
+
+        <select id="tuan">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select>
+
+        <select id="khanh">
+            <option value="USD">USD</option>
+            <option value="VND">VND</option>
+        </select>
+        <button value="Convert" onclick="doitien();">Convert</button>
+    </form>
+</body>
+<script>
+    function doitien(){
+        var a =document.getElementById("txt").value;
+        var b =document.getElementById("tuan").value;
+        var c =document.getElementById("khanh").value;
+
+        //truong hop doi tu VND sang USD//
+        if(b == "USD" && c == "VND"){
+            var area =a*23000;
+            alert(area);
+        }
+        else{
+            if(b == "USD" && c == "USD"){
+                var area = a;
+                alert(area);
+            }
+            else{
+                if(b == "VND" && c == "VND"){
+                    var area = a;
+                    alert(area);
+                }
+                else{
+                    var area = a / 23000;
+                    alert(area);
+                }
+            }
+        }
+
+        }
+
+
+</script>
+</html>
